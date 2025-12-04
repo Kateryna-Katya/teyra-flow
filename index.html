@@ -1,56 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/teyra-flow/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teyra-Flow | Решения, которые меняют правила игры</title>
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2032C12%2044.9706%2022.0294%2055%2035%2055C47.9706%2055%2058%2044.9706%2058%2032C58%2019.0294%2047.9706%209%2035%209C22.0294%209%2012%2019.0294%2012%2032Z%22%20stroke%3D%22%233B82F6%22%20stroke-width%3D%224%22%20fill%3D%22%2306B6D4%22%20fill-opacity%3D%220.1%22%2F%3E%3Cpath%20d%3D%22M46.7266%2021.0547L40.7266%2027.0547L29.7266%2038.0547L24.7266%2033.0547L17.7266%2040.0547%22%20stroke%3D%22%230F172A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M25.7266%2040.0547H17.7266V32.0547%22%20stroke%3D%22%230F172A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%223%22%20fill%3D%22%230F172A%22%2F%3E%3C%2Fsvg%3E"
+    type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script type="module" crossorigin src="/teyra-flow/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/teyra-flow/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/teyra-flow/assets/styles-BzRZ3AkB.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="./#hero" class="header__logo">
+      Teyra<span class="text-accent">Flow</span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a href="./#hero" class="header__link">Главная</a></li>
+        <li><a href="./#strategy" class="header__link">Стратегия</a></li>
+        <li><a href="./#innovations" class="header__link">Инновации</a></li>
+        <li><a href="./#growth" class="header__link">Рост</a></li>
+        <li><a href="./#blog" class="header__link">Блог</a></li>
+        <li><a href="./#about" class="header__link">О нас</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="./#contact" class="btn btn--primary header__cta">
+        Начать сейчас
+        <i data-lucide="arrow-right" class="icon-sm"></i>
+      </a>
+
+      <button class="burger-btn" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__container">
+      <ul class="mobile-menu__list">
+        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
+        <li><a href="./#strategy" class="mobile-menu__link">Стратегия</a></li>
+        <li><a href="./#innovations" class="mobile-menu__link">Инновации</a></li>
+        <li><a href="./#growth" class="mobile-menu__link">Рост</a></li>
+        <li><a href="./#blog" class="mobile-menu__link">Блог</a></li>
+        <li><a href="./#contact" class="mobile-menu__link">Контакты</a></li>
+      </ul>
+
+      <a href="./#contact" class="btn btn--primary mobile-menu__btn">
+        Начать сейчас
+      </a>
+    </div>
   </div>
 </header>
 
-
-    <main>
+    <main class="main">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__glow"></div>
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge reveal-up">
+                <i data-lucide="sparkles" class="icon-sm"></i>
+                Платформа года
+            </div>
+
+            <h1 class="hero__title">
+                <span class="hero__title-base reveal-text">Воплотите мечты <br> в </span>
+                <span class="text-accent hero__title-accent">реальность</span>
+            </h1>
+
+            <p class="hero__desc reveal-text">
+                Передовая цифровая инфраструктура для вашего роста.
+                Откройте новые возможности с технологией, которая меняет правила игры.
+                <br><br>
+                <span class="text-highlight">⚡ Платформа уже доступна в Европе</span>
+            </p>
+
+            <div class="hero__actions reveal-up">
+                <a href="#contact" class="btn btn--primary">
+                    Начать сейчас
+                    <i data-lucide="arrow-right" class="icon-sm"></i>
+                </a>
+                <a href="#about" class="btn btn--outline">
+                    Узнать детали
+                </a>
+            </div>
+
+            <div class="hero__trust reveal-up">
+                <div class="trust-item">
+                    <span class="trust-val">2 мин</span>
+                    <span class="trust-label">Быстрый старт</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-val">100%</span>
+                    <span class="trust-label">Проверенный партнер</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="flow-sphere"></div>
+            <div class="glass-card float-anim">
+                <i data-lucide="trending-up" class="accent-icon"></i>
+                <span>Стратегия роста</span>
+            </div>
+            <div class="glass-card float-anim-delayed">
+                <i data-lucide="shield-check" class="accent-icon"></i>
+                <span>Безопасность</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--strategy" id="strategy">
+    <div class="container">
+        <h2 class="section__title reveal-trigger">
+            Пошаговый путь к успеху: Легко разобраться без опыта
+        </h2>
+        <div class="strategy__grid">
+            <div class="strategy__item card reveal-trigger">
+                <div class="strategy__icon"><i data-lucide="layout-grid"></i></div>
+                <h3 class="strategy__heading">Удобная адаптация</h3>
+                <p>Начните быстро и легко. Мы предоставляем все инструменты для реальных задач, применимые уже сегодня.
+                </p>
+            </div>
+            <div class="strategy__item card reveal-trigger">
+                <div class="strategy__icon"><i data-lucide="bar-chart-2"></i></div>
+                <h3 class="strategy__heading">Стратегия роста</h3>
+                <p>Методологии, доказавшие эффективность. Постройте карьеру, которая работает на вас.</p>
+            </div>
+            <div class="strategy__item card reveal-trigger">
+                <div class="strategy__icon"><i data-lucide="lightbulb"></i></div>
+                <h3 class="strategy__heading">Инновации</h3>
+                <p>Технология нового поколения. Оценить перспективы проекта стало проще благодаря AI-инструментам.</p>
+            </div>
+            <div class="strategy__item card reveal-trigger">
+                <div class="strategy__icon"><i data-lucide="dollar-sign"></i></div>
+                <h3 class="strategy__heading">Пассивный доход</h3>
+                <p>Программа пассивного дохода. Наши решения, которые меняют правила игры, работают на вас.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--dark" id="innovations">
+    <div class="container innovation__container">
+        <div class="innovation__content">
+            <h2 class="section__title section__title--white reveal-trigger">
+                Инновационная технология, которая расширяет горизонты проекта
+            </h2>
+            <p class="section__desc section__desc--white reveal-trigger">
+                Наши AI-инструменты разработаны для реальных задач, обеспечивая передовую цифровую инфраструктуру. Мы —
+                ваш проверенный партнер.
+            </p>
+            <a href="#contact" class="btn btn--accent reveal-trigger">
+                Запросить доступ
+                <i data-lucide="zap" class="icon-sm"></i>
+            </a>
+        </div>
+        <div class="innovation__visual reveal-trigger">
+            <img src="img/placeholder.png" alt="Инновационная панель" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section class="section" id="growth">
+    <div class="container">
+        <h2 class="section__title reveal-trigger">
+            Решения, которые меняют правила игры
+        </h2>
+        <div class="growth__grid">
+            <div class="growth__item reveal-trigger">
+                <div class="growth__icon"><i data-lucide="chevrons-up"></i></div>
+                <h3 class="growth__heading">
+                    Практики, применимые уже сегодня
+                </h3>
+                <p>Быстрый и лёгкий старт. Наши методологии доказали свою эффективность на международных рынках.</p>
+            </div>
+            <div class="growth__item reveal-trigger">
+                <div class="growth__icon"><i data-lucide="layers"></i></div>
+                <h3 class="growth__heading">
+                    Технология нового поколения
+                </h3>
+                <p>Подключение занимает 2 минуты. Мы предлагаем удобную адаптацию без сложностей.</p>
+            </div>
+            <div class="growth__item reveal-trigger">
+                <div class="growth__icon"><i data-lucide="graduation-cap"></i></div>
+                <h3 class="growth__heading">
+                    Экспертная поддержка 24/7
+                </h3>
+                <p>Поддержка по всем вопросам на всех этапах. Мы поможем вам переосмыслить подход к развитию.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--blog" id="blog">
+    <div class="container">
+        <h2 class="section__title reveal-trigger">
+            Практики, применимые уже сегодня
+        </h2>
+        <div class="blog__grid">
+            <a href="#" class="blog__card reveal-trigger">
+                <img src="img/placeholder.png" alt="Изображение блога 1" loading="lazy">
+                <div class="blog__content">
+                    <span class="blog__tag">Стратегия</span>
+                    <h3 class="blog__heading">
+                        Как оценить перспективы проекта: пошаговый путь, понятный каждому.
+                    </h3>
+                </div>
+            </a>
+            <a href="#" class="blog__card reveal-trigger">
+                <img src="img/placeholder.png" alt="Изображение блога 2" loading="lazy">
+                <div class="blog__content">
+                    <span class="blog__tag">Инновации</span>
+                    <h3 class="blog__heading">
+                        AI-инструменты для реальных задач: расширьте горизонты проекта.
+                    </h3>
+                </div>
+            </a>
+            <a href="#" class="blog__card reveal-trigger">
+                <img src="img/placeholder.png" alt="Изображение блога 3" loading="lazy">
+                <div class="blog__content">
+                    <span class="blog__tag">Рост</span>
+                    <h3 class="blog__heading">
+                        Технология для пассивного дохода: воплотите мечты в реальность.
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container about__container">
+        <div class="about__visual reveal-trigger">
+            <img src="img/placeholder.png" alt="Эксперты Teyra-Flow" loading="lazy">
+        </div>
+        <div class="about__content">
+            <h2 class="section__title reveal-trigger">
+                Переосмыслите подход к развитию
+            </h2>
+            <p class="section__desc reveal-trigger">
+                Мы — экспертная поддержка на всех этапах. Наша миссия — предоставить вам передовую цифровую
+                инфраструктуру и методологии, доказавшие эффективность. Мы ваш проверенный партнер в мире инноваций.
+            </p>
+            <ul class="about__list reveal-trigger">
+                <li><i data-lucide="check-circle"></i> Инновационная технология нового поколения.</li>
+                <li><i data-lucide="check-circle"></i> Легко разобраться без опыта.</li>
+                <li><i data-lucide="check-circle"></i> Программа пассивного дохода.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section--contact section--dark" id="contact">
+    <div class="container contact__container">
+        <div class="contact__info">
+            <h2 class="section__title section__title--white reveal-trigger">
+                Бесплатная консультация по всем вопросам
+            </h2>
+            <p class="section__desc section__desc--white reveal-trigger">
+                Получить больше информации можно, заполнив форму. Наша команда свяжется с вами в течение 24 часов.
+                Предложение активно только в странах ЕС.
+            </p>
+<ul class="contact__details reveal-trigger">
+    <li><i data-lucide="mail"></i> <a href="mailto:hello@teyra-flow.online">hello@teyra-flow.online</a></li>
+    <li><i data-lucide="phone"></i> <a href="tel:+442012345678">+44 20 1234 5678</a></li>
+    <li><i data-lucide="map-pin"></i> <span>Лондон, Великобритания</span></li>
+</ul>
+        </div>
+
+        <div class="contact__form-wrapper reveal-trigger">
+            <form class="contact__form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" placeholder="Иван" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон (только цифры)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="79001234567" pattern="[0-9]{10,15}" required>
+                </div>
+
+                <div class="form-group form-group--captcha">
+                    <label for="captcha">Сколько будет <span id="captchaQuestion"></span>?</label>
+                    <input type="number" id="captcha" name="captcha" required>
+                    <div class="captcha-status" id="captchaStatus"></div>
+                </div>
+
+                <div class="form-group form-group--checkbox">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я согласен(а) с <a href="personal-data-policy.html">политикой обработки
+                            данных</a>.</label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full-width" id="submitBtn">Запросить
+                    консультацию</button>
+
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__grid">
+
+      <div class="footer__col">
+        <a href="./#hero" class="header__logo footer__logo">
+          Teyra<span class="text-accent">Flow</span>
+        </a>
+        <p class="footer__desc">
+          Передовая цифровая инфраструктура для вашего бизнеса.
+          Экспертная поддержка на всех этапах развития.
+        </p>
+        <ul class="footer__contacts">
+          <li>
+            <i data-lucide="map-pin"></i>
+            <span>14 Wharf Rd, London N1 7RW, UK</span>
+          </li>
+          <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+442012345678">+44 20 1234 5678</a>
+          </li>
+          <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:hello@teyra-flow.online">hello@teyra-flow.online</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Меню</h3>
+        <ul class="footer__menu">
+          <li><a href="./#hero">Главная</a></li>
+          <li><a href="./#innovations">Инновации</a></li>
+          <li><a href="./#blog">Блог</a></li>
+          <li><a href="./#contact">Контакты</a></li>
+          <li><a href="./#about">О платформе</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Информация</h3>
+        <ul class="footer__legal">
+          <li><a href="./privacy.html">Политика конфиденциальности</a></li>
+          <li><a href="./cookies.html">Cookie Policy</a></li>
+          <li><a href="./terms.html">Условия использования</a></li>
+          <li><a href="./return.html">Политика возврата</a></li>
+          <li><a href="./disclaimer.html">Отказ от ответственности</a></li>
+          <li><a href="./personal-data-policy.html">Обработка данных</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2025 Teyra-Flow. Все права защищены.</p>
+    </div>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookiePopup">
+      <div class="cookie-popup__content">
+        <p>Этот сайт использует **cookies** для улучшения работы. Подробнее — в нашей <a href="cookies.html">Cookie
+            политике</a>.</p>
+        <button class="btn btn--primary cookie-popup__btn" id="acceptCookies">Принять</button>
+      </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   </body>
 </html>
