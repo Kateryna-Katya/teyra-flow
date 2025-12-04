@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teyra-Flow | Решения, которые меняют правила игры</title>
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2032C12%2044.9706%2022.0294%2055%2035%2055C47.9706%2055%2058%2044.9706%2058%2032C58%2019.0294%2047.9706%209%2035%209C22.0294%209%2012%2019.0294%2012%2032Z%22%20stroke%3D%22%233B82F6%22%20stroke-width%3D%224%22%20fill%3D%22%2306B6D4%22%20fill-opacity%3D%220.1%22%2F%3E%3Cpath%20d%3D%22M46.7266%2021.0547L40.7266%2027.0547L29.7266%2038.0547L24.7266%2033.0547L17.7266%2040.0547%22%20stroke%3D%22%230F172A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M25.7266%2040.0547H17.7266V32.0547%22%20stroke%3D%22%230F172A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2232%22%20r%3D%223%22%20fill%3D%22%230F172A%22%2F%3E%3C%2Fsvg%3E"
+    type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <load src="./partials/header.html" />
 
-    <main>
+    <main class="main">
       <!-- Loads the specified .html file -->
       <load src="./partials/main.html" />
     </main>
 
     <load src="./partials/footer.html" />
+    <div class="cookie-popup" id="cookiePopup">
+      <div class="cookie-popup__content">
+        <p>Этот сайт использует **cookies** для улучшения работы. Подробнее — в нашей <a href="cookies.html">Cookie
+            политике</a>.</p>
+        <button class="btn btn--primary cookie-popup__btn" id="acceptCookies">Принять</button>
+      </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script type="module" src="./main.js"></script>
   </body>

@@ -1,19 +1,46 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="./#hero" class="header__logo">
+      Teyra<span class="text-accent">Flow</span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a href="./#hero" class="header__link">Главная</a></li>
+        <li><a href="./#strategy" class="header__link">Стратегия</a></li>
+        <li><a href="./#innovations" class="header__link">Инновации</a></li>
+        <li><a href="./#growth" class="header__link">Рост</a></li>
+        <li><a href="./#blog" class="header__link">Блог</a></li>
+        <li><a href="./#about" class="header__link">О нас</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="./#contact" class="btn btn--primary header__cta">
+        Начать сейчас
+        <i data-lucide="arrow-right" class="icon-sm"></i>
+      </a>
+
+      <button class="burger-btn" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__container">
+      <ul class="mobile-menu__list">
+        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
+        <li><a href="./#strategy" class="mobile-menu__link">Стратегия</a></li>
+        <li><a href="./#innovations" class="mobile-menu__link">Инновации</a></li>
+        <li><a href="./#growth" class="mobile-menu__link">Рост</a></li>
+        <li><a href="./#blog" class="mobile-menu__link">Блог</a></li>
+        <li><a href="./#contact" class="mobile-menu__link">Контакты</a></li>
+      </ul>
+
+      <a href="./#contact" class="btn btn--primary mobile-menu__btn">
+        Начать сейчас
+      </a>
+    </div>
   </div>
 </header>
